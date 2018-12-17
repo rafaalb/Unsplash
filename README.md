@@ -14,6 +14,7 @@ Deployed: https://sick-fits-frontend-gztuooplqd.now.sh/
 #To Run:
 Go to main folder and run:
 > npm i
+
 > npm start
 
 For development:
