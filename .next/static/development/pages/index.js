@@ -982,9 +982,6 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
-        href: {
-          pathname: '/item'
-        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29
@@ -993,33 +990,33 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 30
         },
         __self: this
       }, item.name))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContentContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 33
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ItemContent__WEBPACK_IMPORTED_MODULE_6__["default"], {
         item: item,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 34
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FriendsList__WEBPACK_IMPORTED_MODULE_7__["default"], {
         item: item,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 35
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_Age__WEBPACK_IMPORTED_MODULE_5__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 36
         },
         __self: this
       }, "".concat(item.age, " years old"))));
