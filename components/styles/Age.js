@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const PriceTag = styled.span`
+const AgeTag = styled.span`
   background: ${props => props.theme.lighterBlue};
   transform: rotate(3deg);
   color: white;
@@ -20,4 +20,4 @@ const PriceTag = styled.span`
   }
 `;
 
-export default PriceTag;
+export default AgeTag;

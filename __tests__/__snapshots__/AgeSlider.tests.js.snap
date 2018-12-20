@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders and matches the snapshot 1`] = `
+<div>
+  <WithStyles(Typography)
+    id="label"
+  >
+    Min age: 
+    0
+  </WithStyles(Typography)>
+  <WithStyles(Slider)
+    aria-labelledby="Min Age"
+    classes={
+      Object {
+        "container": undefined,
+      }
+    }
+    onChange={[Function]}
+    value={0}
+  />
+  <WithStyles(Typography)
+    id="label"
+  >
+    Max age: 
+    500
+  </WithStyles(Typography)>
+  <WithStyles(Slider)
+    aria-labelledby="Max Age"
+    classes={
+      Object {
+        "container": undefined,
+      }
+    }
+    onChange={[Function]}
+    value={100}
+  />
+  <WithStyles(Button)
+    color="primary"
+    onClick={[Function]}
+    variant="outlined"
+  >
+    Filter
+  </WithStyles(Button)>
+</div>
+`;

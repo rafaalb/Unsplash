@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FriendsList /> renders and matches the snapshot 1`] = `
+<WithStyles(List)>
+  <div>
+    <FriendsList__StyledPrimary>
+      Friends
+    </FriendsList__StyledPrimary>
+    <WithStyles(Chip)
+      avatar={
+        <WithStyles(Avatar)
+          alt="Natacha"
+          src="image.png"
+        />
+      }
+      key="Carlos Perez_0"
+      label="Carlos Perez"
+    />
+    <WithStyles(Chip)
+      avatar={
+        <WithStyles(Avatar)
+          alt="Natacha"
+          src="image.png"
+        />
+      }
+      key="Andres Hevia_1"
+      label="Andres Hevia"
+    />
+    <WithStyles(Chip)
+      avatar={
+        <WithStyles(Avatar)
+          alt="Natacha"
+          src="image.png"
+        />
+      }
+      key="Eric Bellet_2"
+      label="Eric Bellet"
+    />
+  </div>
+</WithStyles(List)>
+`;

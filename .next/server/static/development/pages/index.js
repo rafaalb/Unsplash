@@ -97,11 +97,12 @@ module.exports =
 /*!*********************************!*\
   !*** ./components/AgeSlider.js ***!
   \*********************************/
-/*! exports provided: default */
+/*! exports provided: default, AgeSlider */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AgeSlider", function() { return AgeSlider; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
@@ -216,14 +217,14 @@ function (_React$Component) {
         className: classes.root,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 49
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default.a, {
         id: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 50
         },
         __self: this
       }, "Min age: ", Math.ceil(min * 5)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_lab_Slider__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -240,14 +241,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 51
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default.a, {
         id: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 57
         },
         __self: this
       }, "Max age: ", Math.ceil(max * 5)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_lab_Slider__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -264,14 +265,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 58
         },
         __self: this
       }), error && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: classes.error,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 64
         },
         __self: this
       }, error), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -281,7 +282,7 @@ function (_React$Component) {
         onClick: this.onClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 65
         },
         __self: this
       }, "Filter"));
@@ -291,11 +292,17 @@ function (_React$Component) {
   return AgeSlider;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
+_defineProperty(AgeSlider, "defaultProps", {
+  classes: {},
+  onFilter: function onFilter() {}
+});
+
 AgeSlider.propTypes = {
   classes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired,
-  onFilter: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.function
+  onFilter: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["withStyles"])(styles)(AgeSlider));
+
 
 /***/ }),
 
@@ -814,11 +821,12 @@ var StyledDrawer = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__[
 /*!***********************************!*\
   !*** ./components/FriendsList.js ***!
   \***********************************/
-/*! exports provided: default */
+/*! exports provided: default, FriendsList */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FriendsList", function() { return FriendsList; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
@@ -925,7 +933,7 @@ function (_Component) {
             src: item.thumbnail,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 43
+              lineNumber: 46
             },
             __self: this
           }),
@@ -934,7 +942,7 @@ function (_Component) {
           key: "".concat(friend, "_").concat(i),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42
+            lineNumber: 45
           },
           __self: this
         });
@@ -954,20 +962,20 @@ function (_Component) {
         className: classes.root,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 56
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: classes.listText,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 57
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPrimary, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 58
         },
         __self: this
       }, !lodash__WEBPACK_IMPORTED_MODULE_8___default.a.size(item.friends) && "No ", "Friends"), this.renderFriends()));
@@ -977,10 +985,15 @@ function (_Component) {
   return FriendsList;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
+_defineProperty(FriendsList, "defaultProps", {
+  classes: {}
+});
+
 FriendsList.propTypes = {
   classes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["withStyles"])(styles)(FriendsList));
+
 
 /***/ }),
 
@@ -1973,13 +1986,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 
-var PriceTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.span.withConfig({
-  displayName: "Age__PriceTag",
+var AgeTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.span.withConfig({
+  displayName: "Age__AgeTag",
   componentId: "sc-5kkgmj-0"
 })(["background:", ";transform:rotate(3deg);color:white;font-weight:600;padding:5px;line-height:1;font-size:3rem;display:inline-block;position:absolute;top:30px;right:-3px;@media screen and (max-width:615px){font-size:2.4rem;}@media screen and (max-width:880px){top:-3px;}"], function (props) {
   return props.theme.lighterBlue;
 });
-/* harmony default export */ __webpack_exports__["default"] = (PriceTag);
+/* harmony default export */ __webpack_exports__["default"] = (AgeTag);
 
 /***/ }),
 
@@ -2059,9 +2072,13 @@ var itemsPerScroll = 5;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (list) {
-  return list ? list.reduce(function (acum, current) {
-    return acum + current + " ";
-  }, "").slice(0, -2).concat(".") : '';
+  return list ? list.reduce(function (acum, current, i) {
+    if (i === list.length - 1) {
+      return acum + current + ".";
+    }
+
+    return acum + current + ", ";
+  }, "") : '';
 });
 
 /***/ }),

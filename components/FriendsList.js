@@ -36,6 +36,9 @@ const StyledPrimary = styled(Typography)`
 `;
 
 class FriendsList extends Component {
+  static defaultProps = {
+    classes: {}
+  }
   renderFriends = () => {
     const { item, classes } = this.props;
     return item.friends.map((friend, i) => (
@@ -69,3 +72,4 @@ FriendsList.propTypes = {
 
 
 export default withStyles(styles)(FriendsList);
+export { FriendsList };

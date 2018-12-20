@@ -22,6 +22,11 @@ const styles = theme => ({
 });
 
 class AgeSlider extends React.Component {
+  static defaultProps = {
+    classes: {},
+    onFilter: () => {}
+  };
+
   state = {
      min: 0,
      max: 100,
@@ -72,7 +77,8 @@ class AgeSlider extends React.Component {
 
 AgeSlider.propTypes = {
   classes: PropTypes.object.isRequired,
-  onFilter: PropTypes.function,
+  onFilter: PropTypes.func,
 };
 
 export default withStyles(styles)(AgeSlider);
+export { AgeSlider };

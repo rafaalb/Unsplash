@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Item /> renders and matches the snapshot 1`] = `
+<ItemStyles__Item>
+  <img
+    src="image.jpg"
+  />
+  <Title>
+    <Link>
+      <a>
+        Zedkin Thor
+      </a>
+    </Link>
+  </Title>
+  <Item__ContentContainer>
+    <WithStyles(ItemContainer)
+      item={
+        Object {
+          "age": 20,
+          "friends": Array [
+            "Emily",
+            "Rafael",
+          ],
+          "hair_color": "red",
+          "height": 150,
+          "name": "Zedkin Thor",
+          "professions": Array [
+            "Carpenter",
+            "Computer Scientist",
+          ],
+          "thumbnail": "image.jpg",
+          "weight": 200,
+        }
+      }
+    />
+    <WithStyles(FriendsList)
+      item={
+        Object {
+          "age": 20,
+          "friends": Array [
+            "Emily",
+            "Rafael",
+          ],
+          "hair_color": "red",
+          "height": 150,
+          "name": "Zedkin Thor",
+          "professions": Array [
+            "Carpenter",
+            "Computer Scientist",
+          ],
+          "thumbnail": "image.jpg",
+          "weight": 200,
+        }
+      }
+    />
+    <Age__AgeTag>
+      20 years old
+    </Age__AgeTag>
+  </Item__ContentContainer>
+</ItemStyles__Item>
+`;
