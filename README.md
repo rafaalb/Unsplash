@@ -9,7 +9,7 @@ This project uses the following Stack:
 - Material UI (https://github.com/mui-org/material-ui)
 
 
-Deployed: https://sick-fits-frontend-wovyaohbmv.now.sh
+Deployed: https://sick-fits-frontend-jrivswqwwp.now.sh
 
 #To Run:
 Go to main folder and run:
