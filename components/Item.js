@@ -26,7 +26,9 @@ export default class Item extends Component {
       <ItemStyles>
         {item.thumbnail &&  <img src={item.thumbnail} />}
         <Title>
-          <Link>
+          <Link href={{
+            pathname: '/'
+          }}>
             <a>{item.name}</a>
           </Link>
         </Title>

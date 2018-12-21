@@ -26,8 +26,9 @@ export const items = (state = initialState, action) => {
       const more = state.data.slice(state.shownItems, state.shownItems + itemsPerScroll);
       return {
         ...state,
-        tmpData: state.tmpData.concat(more)
-      }
+        tmpData: state.tmpData.concat(more),
+        shownItems: state.shownItems + itemsPerScroll
+      };
     case ACTIONS.SEARCH_ITEMS:
       return {
         ...state,
@@ -38,7 +39,7 @@ export const items = (state = initialState, action) => {
         ...state,
         tmpData: action.result,
         searching: false,
-      }
+      };
     case ACTIONS.SORT_ITEMS:
       return {
         ...state,
@@ -50,7 +51,7 @@ export const items = (state = initialState, action) => {
         searching: false,
         data: action.result,
         tmpData: action.result.slice(0, itemsPerScroll)
-      }
+      };
     case ACTIONS.FILTER_ITEMS:
       return {
         ...state,

@@ -56,7 +56,7 @@ export const searchItems = (term) => {
 export const sortByName = (property, order) => {
   return (dispatch, getState) => {
     dispatch({ type: SORT_ITEMS });
-    const items =  getState().items;
+    const items = getState().items;
 
     let data = _.sortBy(items.data, property, order);
     if (order === 'desc') data = data.reverse();

@@ -585,7 +585,8 @@ var items = function items() {
     case _actions_items__WEBPACK_IMPORTED_MODULE_0__["ADD_ITEMS"]:
       var more = state.data.slice(state.shownItems, state.shownItems + _config__WEBPACK_IMPORTED_MODULE_1__["itemsPerScroll"]);
       return _objectSpread({}, state, {
-        tmpData: state.tmpData.concat(more)
+        tmpData: state.tmpData.concat(more),
+        shownItems: state.shownItems + _config__WEBPACK_IMPORTED_MODULE_1__["itemsPerScroll"]
       });
 
     case _actions_items__WEBPACK_IMPORTED_MODULE_0__["SEARCH_ITEMS"]:
