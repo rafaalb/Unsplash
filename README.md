@@ -7,7 +7,7 @@ Built using:
 - Material UI (https://github.com/mui-org/material-ui)
 - React Spring
 
-Deployed: https://sick-fits-frontend-jrivswqwwp.now.sh
+Deployed: https://sick-fits-frontend-nkmwlxvxcu.now.sh
 
 #To Run:
 Go to main folder and run:
