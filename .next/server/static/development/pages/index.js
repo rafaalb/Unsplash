@@ -956,13 +956,17 @@ var Center = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withCo
   displayName: "Items__Center",
   componentId: "tikday-0"
 })(["text-align:center;"]);
+var Span = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.span.withConfig({
+  displayName: "Items__Span",
+  componentId: "tikday-1"
+})(["font-family:'Gotham Rounded';"]);
 var ItemsList = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Items__ItemsList",
-  componentId: "tikday-1"
+  componentId: "tikday-2"
 })(["display:grid;grid-gap:40px;margin:0 auto;grid-template-columns:1fr 1fr;@media screen and (max-width:500px){grid-template-columns:1fr;}"]);
 var UserInfo = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Items__UserInfo",
-  componentId: "tikday-2"
+  componentId: "tikday-3"
 })(["text-align:left;margin-bottom:30px;h3{color:white;}"]);
 var options = ['Carlos', 'Mary', 'Miguel', 'Emily', 'Rafael', 'Andres'];
 
@@ -973,7 +977,7 @@ var Suggest = function Suggest(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 50
     },
     __self: this
   }, "Start searching for amazing photos"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -981,13 +985,13 @@ var Suggest = function Suggest(_ref) {
     toggleError: function toggleError() {},
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 53
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 57
     },
     __self: this
   }, "or you can check any of these"), options.map(function (option) {
@@ -1002,10 +1006,16 @@ var Suggest = function Suggest(_ref) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 59
       },
       __self: this
-    }, option);
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Span, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65
+      },
+      __self: this
+    }, option));
   }));
 };
 
@@ -1036,7 +1046,7 @@ function (_Component) {
           key: "".concat(item.id, "_").concat(i),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 75
+            lineNumber: 80
           },
           __self: this
         });
@@ -1064,7 +1074,7 @@ function (_Component) {
       if (items.searching) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Loading__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 88
         },
         __self: this
       });
@@ -1073,38 +1083,38 @@ function (_Component) {
         search: this.props.fetchUsers,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 90
         },
         __self: this
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Center, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 93
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserInfo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 94
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 95
         },
         __self: this
       }, this.props.users.selected.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("em", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 96
         },
         __self: this
       }, this.props.users.selected.bio)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemsList, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 98
         },
         __self: this
       }, this._renderItems()));
@@ -1218,6 +1228,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _redux_actions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../redux/actions */ "./redux/actions/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_9__);
 var _jsxFileName = "/Users/rafaelpina/Documents/PersonalProjects/xotv/frontend/components/Main.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -1251,7 +1263,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var drawerWidth = 280;
+var Footer = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div.withConfig({
+  displayName: "Main__Footer",
+  componentId: "sc-9y3gyp-0"
+})(["position:absolute;width:100%;bottom:-60px;display:flex;justify-content:center;a{margin-left:20px;&:hover{color:white;}}"]);
 
 var styles = function styles(theme) {
   return {
@@ -1297,6 +1314,8 @@ var styles = function styles(theme) {
     content: {
       flexGrow: 1,
       marginTop: 50,
+      position: 'relative',
+      marginBottom: 100,
       padding: theme.spacing.unit * 3,
       transition: theme.transitions.create('margin', {
         easing: theme.transitions.easing.sharp,
@@ -1366,13 +1385,13 @@ function (_Component) {
         className: classes.root,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 117
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_3___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 118
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AppBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -1386,7 +1405,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 119
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Drawer__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1398,30 +1417,96 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 125
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_1___default()(classes.content, _defineProperty({}, classes.contentShift, open)),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 129
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: classes.drawerHeader,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 134
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Items__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 135
         },
         __self: this
-      })));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Footer, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 136
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        className: "icon fa-twitter",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 137
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "label",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 137
+        },
+        __self: this
+      }, "Twitter")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        className: "icon fa-facebook",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 138
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "label",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 138
+        },
+        __self: this
+      }, "Facebook")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        className: "icon fa-instagram",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 139
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "label",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 139
+        },
+        __self: this
+      }, "Instagram")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        className: "icon fa-github",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 140
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "label",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 140
+        },
+        __self: this
+      }, "GitHub")))));
     }
   }]);
 

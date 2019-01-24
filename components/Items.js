@@ -12,6 +12,11 @@ const Center = styled.div`
   text-align: center;
 `;
 
+
+const Span = styled.span`
+  font-family: 'Gotham Rounded';
+`;
+
 const ItemsList = styled.div`
   display: grid;
   grid-gap: 40px;
@@ -57,7 +62,7 @@ const Suggest = ({ classes, onEnterPress, search }) => {
           style={{ margin: 5 }}
           onClick={() => search(option)}
         >
-            {option}
+            <Span>{option}</Span>
         </Button>
       )}
     </>

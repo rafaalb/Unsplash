@@ -7,9 +7,23 @@ import Drawer from './Drawer';
 import Items from './Items';
 import { sortByName, filterByAge } from '../redux/actions';
 import { connect } from 'react-redux';
-
+import styled from 'styled-components'
 
 const drawerWidth = 280;
+
+const Footer = styled.div`
+  position: absolute;
+  width: 100%;
+  bottom: -60px;
+  display: flex;
+  justify-content: center;
+  a {
+    margin-left: 20px;
+    &:hover {
+      color: white;
+    }
+  }
+`;
 
 const styles = theme => ({
   root: {
@@ -54,6 +68,8 @@ const styles = theme => ({
   content: {
     flexGrow: 1,
     marginTop: 50,
+    position: 'relative',
+    marginBottom: 100,
     padding: theme.spacing.unit * 3,
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
@@ -110,14 +126,20 @@ class Main extends Component {
           isOpen={this.state.open}
           onSelect={() => this.setState({ open: false })}
         />
-        <main
+        <div
           className={classNames(classes.content, {
             [classes.contentShift]: open,
           })}
         >
           <div className={classes.drawerHeader} />
           <Items />
-        </main>
+          <Footer>
+            <a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a>
+            <a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a>
+            <a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a>
+            <a href="#" className="icon fa-github"><span className="label">GitHub</span></a>
+          </Footer>
+        </div>
       </div>
     );
   }
