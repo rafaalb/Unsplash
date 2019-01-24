@@ -139,12 +139,13 @@ class Main extends Component {
         >
           <div className={classes.drawerHeader} />
           <Items />
+          {this.state.open && 
           <Footer>
             <a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a>
             <a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a>
             <a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a>
             <a href="#" className="icon fa-github"><span className="label">GitHub</span></a>
-          </Footer>
+          </Footer>}
         </div>
       </div>
     );

@@ -1336,10 +1336,10 @@ function (_Component) {
           lineNumber: 141
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Footer, {
+      }), this.state.open && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Footer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 142
+          lineNumber: 143
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1347,14 +1347,14 @@ function (_Component) {
         className: "icon fa-twitter",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 144
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 144
         },
         __self: this
       }, "Twitter")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1362,14 +1362,14 @@ function (_Component) {
         className: "icon fa-facebook",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 145
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 145
         },
         __self: this
       }, "Facebook")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1377,14 +1377,14 @@ function (_Component) {
         className: "icon fa-instagram",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 146
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 146
         },
         __self: this
       }, "Instagram")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1392,14 +1392,14 @@ function (_Component) {
         className: "icon fa-github",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 147
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 147
         },
         __self: this
       }, "GitHub")))));
