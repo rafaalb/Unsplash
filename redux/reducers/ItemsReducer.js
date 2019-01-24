@@ -3,13 +3,14 @@ const initialState = {
   data: [],
   fetching: false,
   error: false,
+  firstLoad: true,
   shownItems: 0
 };
 
 export const items = (state = initialState, action) => {
   switch (action.type) {
     case ACTIONS.FETCH_ITEM:
-      return { ...state, fetching: true };
+      return { ...state, fetching: true, firstLoad: false };
     case ACTIONS.FETCH_ITEM_SUCCESS:
       return {
         ...state,

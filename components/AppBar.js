@@ -140,16 +140,6 @@ class SearchAppBar extends Component {
             />
           </Logo>
           <div className={classes.grow} />
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="error">
-              <MailIcon />
-            </Badge>
-          </IconButton>
-          <IconButton color="inherit">
-            <Badge badgeContent={17} color="error">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
           <img
             src={profileImage}
             alt="profile-image"

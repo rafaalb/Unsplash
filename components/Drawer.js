@@ -20,7 +20,26 @@ import SearchBar from './SearchBar';
 import { fetchUsers } from './../redux/actions'
 import withSizes from 'react-sizes'
 import { withStyles } from '@material-ui/core';
+import styled from 'styled-components'
 const drawerWidth = 280;
+
+const Footer = styled.div`
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #18171c;
+  a {
+    font-size: 10px;
+    color: white;
+  }
+`;
 
 const styles = theme => ({
   root: {
@@ -104,7 +123,6 @@ class Drawer extends Component {
     this.props.handleDrawerOpen()
   }
   render() {
-    console.log(this.state)
     const { classes, theme } = this.props;
     return (
       <DrawerUI

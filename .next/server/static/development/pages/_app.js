@@ -615,6 +615,7 @@ var initialState = {
   data: [],
   fetching: false,
   error: false,
+  firstLoad: true,
   shownItems: 0
 };
 var items = function items() {
@@ -624,7 +625,8 @@ var items = function items() {
   switch (action.type) {
     case _actions_items__WEBPACK_IMPORTED_MODULE_0__["FETCH_ITEM"]:
       return _objectSpread({}, state, {
-        fetching: true
+        fetching: true,
+        firstLoad: false
       });
 
     case _actions_items__WEBPACK_IMPORTED_MODULE_0__["FETCH_ITEM_SUCCESS"]:
@@ -697,7 +699,8 @@ var initialState = {
   total: 0,
   selected: {
     photos: []
-  }
+  },
+  firstLoad: true
 };
 var users = function users() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -706,7 +709,8 @@ var users = function users() {
   switch (action.type) {
     case _actions_users__WEBPACK_IMPORTED_MODULE_0__["FETCH_USERS"]:
       return _objectSpread({}, state, {
-        loading: true
+        loading: true,
+        firstLoad: false
       });
 
     case _actions_users__WEBPACK_IMPORTED_MODULE_0__["FETCH_USERS_SUCCESS"]:

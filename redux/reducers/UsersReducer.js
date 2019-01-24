@@ -7,14 +7,15 @@ const initialState = {
   total: 0,
   selected: {
     photos: []
-  }
+  },
+  firstLoad: true
 };
 
 
 export const users = (state = initialState, action) => {
   switch (action.type) {
     case ACTIONS.FETCH_USERS:
-      return { ...state, loading: true };
+      return { ...state, loading: true, firstLoad: false };
     case ACTIONS.FETCH_USERS_SUCCESS:
       return {
         ...state,

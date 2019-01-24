@@ -262,55 +262,13 @@ function (_Component) {
           lineNumber: 142
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_5___default.a, {
-        color: "inherit",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 143
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Badge__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        badgeContent: 4,
-        color: "error",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 144
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Mail__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 145
-        },
-        __self: this
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_5___default.a, {
-        color: "inherit",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 148
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Badge__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        badgeContent: 17,
-        color: "error",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 149
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Notifications__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 150
-        },
-        __self: this
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: profileImage,
         alt: "profile-image",
         className: classes.imageProfile,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 143
         },
         __self: this
       })));
@@ -378,6 +336,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! react-sizes */ "./node_modules/react-sizes/dist/react-sizes.min.js");
 /* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_20__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/index.es.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 var _jsxFileName = "/Users/rafaelpina/Documents/PersonalProjects/xotv/frontend/components/Drawer.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -424,7 +383,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var drawerWidth = 280;
+var Footer = styled_components__WEBPACK_IMPORTED_MODULE_22__["default"].div.withConfig({
+  displayName: "Drawer__Footer",
+  componentId: "sc-16uzmax-0"
+})(["width:100%;margin-top:20px;margin-bottom:20px;position:absolute;bottom:0;display:flex;align-items:center;justify-content:space-between;padding-left:20px;padding-right:20px;background-color:#18171c;a{font-size:10px;color:white;}"]);
 
 var styles = function styles(theme) {
   return {
@@ -531,7 +495,6 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      console.log(this.state);
       var _this$props = this.props,
           classes = _this$props.classes,
           theme = _this$props.theme;
@@ -545,14 +508,14 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 128
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: classes.drawerHeader,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 138
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_18__["default"], {
@@ -564,13 +527,13 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 139
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_2___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 144
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ExpansionPanel__WEBPACK_IMPORTED_MODULE_10___default.a, {
@@ -586,7 +549,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 145
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ExpansionPanelSummary__WEBPACK_IMPORTED_MODULE_12___default.a, {
@@ -597,32 +560,32 @@ function (_Component) {
           color: 'secondary',
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 132
+            lineNumber: 150
           },
           __self: this
         }),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132
+          lineNumber: 150
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_3___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 151
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ListItemIcon__WEBPACK_IMPORTED_MODULE_5___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 134
+          lineNumber: 152
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_FilterList__WEBPACK_IMPORTED_MODULE_7___default.a, {
         color: 'secondary',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135
+          lineNumber: 153
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -634,13 +597,13 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 139
+            lineNumber: 157
           },
           __self: this
         }, "List of Users"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137
+          lineNumber: 155
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ExpansionPanelDetails__WEBPACK_IMPORTED_MODULE_11___default.a, {
@@ -649,26 +612,26 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 167
         },
         __self: this
       }, this.state.error ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 168
         },
         __self: this
       }, "No results found") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserList__WEBPACK_IMPORTED_MODULE_14__["default"], {
         onSelect: this.props.onSelect,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 168
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_1___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 171
         },
         __self: this
       })));
@@ -854,6 +817,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_size__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash/size */ "./node_modules/lodash/size.js");
 /* harmony import */ var lodash_size__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash_size__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _Loading__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Loading */ "./components/Loading.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/Button/index.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _SearchBar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./SearchBar */ "./components/SearchBar.js");
 var _jsxFileName = "/Users/rafaelpina/Documents/PersonalProjects/xotv/frontend/components/Items.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -883,6 +849,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+
 var Center = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Items__Center",
   componentId: "tikday-0"
@@ -891,6 +859,54 @@ var ItemsList = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.wi
   displayName: "Items__ItemsList",
   componentId: "tikday-1"
 })(["display:grid;grid-gap:40px;margin:0 auto;grid-template-columns:1fr 1fr;@media screen and (max-width:500px){grid-template-columns:1fr;}"]);
+var UserInfo = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Items__UserInfo",
+  componentId: "tikday-2"
+})(["text-align:left;margin-bottom:30px;h3{color:white;}"]);
+var options = ['Carlos', 'Mary', 'Miguel', 'Emily', 'Rafael', 'Andres'];
+
+var Suggest = function Suggest(_ref) {
+  var classes = _ref.classes,
+      onEnterPress = _ref.onEnterPress,
+      search = _ref.search;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, "Start searching for amazing photos"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    onEnterPress: onEnterPress,
+    toggleError: function toggleError() {},
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, "or you can check any of these"), options.map(function (option) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_7___default.a, {
+      variant: "outlined",
+      color: "primary",
+      style: {
+        margin: 5
+      },
+      onClick: function onClick() {
+        return search(option);
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }, option);
+  }));
+};
 
 var Items =
 /*#__PURE__*/
@@ -919,11 +935,15 @@ function (_Component) {
           key: "".concat(item.id, "_").concat(i),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 75
           },
           __self: this
         });
       });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "_onEnterPress", function (payload) {
+      return _this.props.fetchUsers(payload);
     });
 
     return _this;
@@ -932,30 +952,58 @@ function (_Component) {
   _createClass(Items, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var dispatch = this.props.dispatch;
-      dispatch(Object(_redux_actions__WEBPACK_IMPORTED_MODULE_4__["fetchItems"])());
+      this.props.fetchItems();
     }
   }, {
     key: "render",
     value: function render() {
-      var items = this.props.items;
+      var _this$props = this.props,
+          items = _this$props.items,
+          users = _this$props.users;
       if (items.searching) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Loading__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 83
+        },
+        __self: this
+      });
+      if (users.firstLoad) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Suggest, {
+        onEnterPress: this._onEnterPress,
+        search: this.props.fetchUsers,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85
         },
         __self: this
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Center, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 88
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemsList, {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserInfo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 89
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90
+        },
+        __self: this
+      }, this.props.users.selected.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("em", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91
+        },
+        __self: this
+      }, this.props.users.selected.bio)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemsList, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
         },
         __self: this
       }, this._renderItems()));
@@ -965,24 +1013,20 @@ function (_Component) {
   return Items;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    fetchUsers: function fetchUsers(payload) {
+      return dispatch(Object(_redux_actions__WEBPACK_IMPORTED_MODULE_4__["fetchUsers"])(payload));
+    },
+    fetchItems: function fetchItems(payload) {
+      return dispatch(Object(_redux_actions__WEBPACK_IMPORTED_MODULE_4__["fetchItems"])(payload));
+    }
+  };
+};
+
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(function (state) {
   return state;
-})(Items));
-{
-  /* <Spring
-           from={{ number: 0 }}
-           to={{ number: 2500 }}
-           config={{ delay: 1500 }}
-         >
-           {props =>
-             <div>
-               <h2>
-                 {props.number.toFixed(0)}
-               </h2>
-             </div>
-           }
-         </Spring> */
-}
+}, mapDispatchToProps)(Items));
 
 /***/ }),
 
@@ -1699,7 +1743,6 @@ function (_Component) {
       var _this2 = this;
 
       var users = this.props.users.data;
-      console.log(this.props.users);
       return users.map(function (user) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
           key: user.id,
@@ -1707,7 +1750,7 @@ function (_Component) {
           onClickUser: _this2.onClickUser,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 16
+            lineNumber: 15
           },
           __self: this
         });

@@ -11,7 +11,6 @@ class UserList extends Component {
   }
   render() {
     const { data: users } = this.props.users
-    console.log(this.props.users)
     return users.map((user) => (
       <UserItem
         key={user.id}

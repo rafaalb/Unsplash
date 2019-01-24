@@ -1,13 +1,11 @@
-# Advanced-React
+# Unsplash
 
-React - NextJs - Styled Components - Material UI - Server Side Rendering
-
-This project uses the following Stack:
+Built using:
 - React 16.3
 - NextJs (https://github.com/zeit/next.js/)
 - Styled components (https://github.com/styled-components/styled-components)
 - Material UI (https://github.com/mui-org/material-ui)
-
+- React Spring
 
 Deployed: https://sick-fits-frontend-jrivswqwwp.now.sh
 
