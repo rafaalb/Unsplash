@@ -1164,7 +1164,7 @@ var drawerWidth = 280;
 var Footer = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
   displayName: "Main__Footer",
   componentId: "sc-9y3gyp-0"
-})(["position:absolute;width:100%;bottom:-60px;display:flex;justify-content:center;a{margin-left:20px;&:hover{color:white;}}"]);
+})(["position:absolute;width:100%;bottom:-60px;display:flex;justify-content:center;a{margin-left:10px;&:hover{color:white;}@media screen and (max-width:600px){font-size:13px;}}@media screen and (max-width:600px){justify-content:flex-start;}"]);
 
 var styles = function styles(theme) {
   return {
@@ -1281,13 +1281,13 @@ function (_Component) {
         className: classes.root,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 123
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_3___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 124
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AppBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -1301,7 +1301,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 125
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Drawer__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1313,33 +1313,33 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 131
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_1___default()(classes.content, _defineProperty({}, classes.contentShift, open)),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 135
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: classes.drawerHeader,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 134
+          lineNumber: 140
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Items__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135
+          lineNumber: 141
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Footer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 142
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1347,14 +1347,14 @@ function (_Component) {
         className: "icon fa-twitter",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137
+          lineNumber: 143
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137
+          lineNumber: 143
         },
         __self: this
       }, "Twitter")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1362,14 +1362,14 @@ function (_Component) {
         className: "icon fa-facebook",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138
+          lineNumber: 144
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138
+          lineNumber: 144
         },
         __self: this
       }, "Facebook")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1377,14 +1377,14 @@ function (_Component) {
         className: "icon fa-instagram",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 145
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 145
         },
         __self: this
       }, "Instagram")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1392,14 +1392,14 @@ function (_Component) {
         className: "icon fa-github",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140
+          lineNumber: 146
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140
+          lineNumber: 146
         },
         __self: this
       }, "GitHub")))));

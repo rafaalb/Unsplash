@@ -18,10 +18,16 @@ const Footer = styled.div`
   display: flex;
   justify-content: center;
   a {
-    margin-left: 20px;
+    margin-left: 10px;
     &:hover {
       color: white;
     }
+    @media screen and (max-width: 600px) {
+      font-size: 13px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    justify-content: flex-start;
   }
 `;
 
