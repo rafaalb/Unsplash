@@ -3,13 +3,20 @@ import {
   addItems,
   searchItems,
   sortByName,
-  filterByAge
+  filterByAge,
 } from './items';
+
+import {
+  fetchUsers,
+  selectUser
+} from './users';
 
 export {
   fetchItems,
   addItems,
   searchItems,
   sortByName,
-  filterByAge
+  filterByAge,
+  fetchUsers,
+  selectUser
 }

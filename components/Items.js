@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux'; 
 import Item from './Item';
 import { fetchItems, addItems } from '../redux/actions';
-import _ from 'lodash';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import _size from 'lodash/size';
 import Loading from './Loading';
 
 const Center = styled.div`
@@ -13,27 +12,23 @@ const Center = styled.div`
 
 const ItemsList = styled.div`
   display: grid;
-  grid-gap: 60px;
-  max-width: ${props => props.theme.maxWidth};
+  grid-gap: 40px;
   margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 class Items extends Component {
-  state = {
-    tmpItems: [],
-  }
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(fetchItems());
   }
-  fetchMoreItems = () => {
-    const { dispatch } = this.props;
-    dispatch(addItems());
-  }
   _renderItems = () => {
-    const { tmpData } = this.props.items;
-    if (!_.size(tmpData)) return;
-    return tmpData.map((item, i) => (
+    const { selected } = this.props.users
+    if (!_size(selected.photos)) return;
+    return selected.photos.map((item, i) => (
       <Item item={item} key={`${item.id}_${i}`} />
     ));
   }
@@ -42,19 +37,26 @@ class Items extends Component {
     if (items.searching) return <Loading />;
     return (
       <Center>
-        <InfiniteScroll
-          dataLength={items.tmpData.length}
-          next={this.fetchMoreItems}
-          hasMore={true}
-          loader={<Loading />}
-        >
-          <ItemsList>
-            {this._renderItems()}
-          </ItemsList>
-        </InfiniteScroll>
+        <ItemsList>
+          {this._renderItems()}
+        </ItemsList>
       </Center>
     );
   }
 }
 
 export default connect(state => state)(Items);
+
+{/* <Spring
+          from={{ number: 0 }}
+          to={{ number: 2500 }}
+          config={{ delay: 1500 }}
+        >
+          {props =>
+            <div>
+              <h2>
+                {props.number.toFixed(0)}
+              </h2>
+            </div>
+          }
+        </Spring> */}

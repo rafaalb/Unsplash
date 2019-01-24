@@ -35,6 +35,8 @@
     "react-infinite-scroll-component": "^4.2.0",
     "react-jss": "^8.6.1",
     "react-redux": "^6.0.0",
+    "react-sizes": "^1.0.4",
+    "react-spring": "^7.2.10",
     "react-stripe-checkout": "^2.6.3",
     "react-transition-group": "^2.5.0",
     "redux": "^4.0.1",

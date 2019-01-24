@@ -12,7 +12,7 @@ class MyDocument extends Document {
     return (
       <html lang="en" dir="ltr">
         <Head>
-          <title>My page</title>
+          <title>XOTV App</title>
           <meta charSet="utf-8" />
           {styleTags}
           {/* Use minimum-scale=1 to enable GPU rasterization */}
@@ -25,6 +25,7 @@ class MyDocument extends Document {
           />
           {/* PWA primary color */}
           <meta name="theme-color" content={pageContext.theme.palette.primary.main} />
+          <link href="//db.onlinewebfonts.com/c/ae8f19f441b335c3fda30febf5069c5a?family=Gotham+Rounded" rel="stylesheet" type="text/css" />
         </Head>
         <body>
           <Main />

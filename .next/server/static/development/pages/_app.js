@@ -97,15 +97,17 @@ module.exports =
 /*!*******************!*\
   !*** ./config.js ***!
   \*******************/
-/*! exports provided: endpoint, itemsPerScroll */
+/*! exports provided: endpoint, ACCESS_KEY, SECRET_KEY */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "endpoint", function() { return endpoint; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "itemsPerScroll", function() { return itemsPerScroll; });
-var endpoint = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json";
-var itemsPerScroll = 5;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCESS_KEY", function() { return ACCESS_KEY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SECRET_KEY", function() { return SECRET_KEY; });
+var endpoint = "https://api.unsplash.com";
+var ACCESS_KEY = 'aa2f3c3be8125f1fc86e3007153420c4e446c19b7b0c6d80a6257b281c9a0dc5';
+var SECRET_KEY = 'a5ab4ed2efdc772dca8d5636a26c0d897907df38cd92baa9067e57093d9596b5';
 
 /***/ }),
 
@@ -124,7 +126,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _redux_reducers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/reducers */ "./redux/reducers/index.js");
 
-var _jsxFileName = "/Users/rafaelpina/Documents/PersonalProjects/Altran/frontend/lib/withReduxStore.js";
+var _jsxFileName = "/Users/rafaelpina/Documents/PersonalProjects/xotv/frontend/lib/withReduxStore.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -281,7 +283,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_withReduxStore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/withReduxStore */ "./lib/withReduxStore.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_7__);
-var _jsxFileName = "/Users/rafaelpina/Documents/PersonalProjects/Altran/frontend/pages/_app.js";
+var _jsxFileName = "/Users/rafaelpina/Documents/PersonalProjects/xotv/frontend/pages/_app.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -469,7 +471,7 @@ var fetchItems = function fetchItems() {
     dispatch({
       type: FETCH_ITEM
     });
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(_config__WEBPACK_IMPORTED_MODULE_2__["endpoint"]).then(function (res) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_config__WEBPACK_IMPORTED_MODULE_2__["endpoint"], "/photos/?client_id=").concat(_config__WEBPACK_IMPORTED_MODULE_2__["ACCESS_KEY"])).then(function (res) {
       if (res.status === 200) {
         return dispatch(fetchItemsSuccess(res.data));
       }
@@ -533,6 +535,66 @@ var filterByAge = function filterByAge(min, max) {
 
 /***/ }),
 
+/***/ "./redux/actions/users.js":
+/*!********************************!*\
+  !*** ./redux/actions/users.js ***!
+  \********************************/
+/*! exports provided: FETCH_USERS_FAILURE, FETCH_USERS_SUCCESS, FETCH_USERS, SELECT_USER, fetchUsers, fetchUsersSuccess, fetchUsersError, selectUser */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_USERS_FAILURE", function() { return FETCH_USERS_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_USERS_SUCCESS", function() { return FETCH_USERS_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_USERS", function() { return FETCH_USERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SELECT_USER", function() { return SELECT_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUsers", function() { return fetchUsers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUsersSuccess", function() { return fetchUsersSuccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUsersError", function() { return fetchUsersError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectUser", function() { return selectUser; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config */ "./config.js");
+
+
+var FETCH_USERS_FAILURE = 'FETCH_USERS_FAILURE';
+var FETCH_USERS_SUCCESS = 'FETCH_USERS_SUCCESS';
+var FETCH_USERS = 'FETCH_USERS';
+var SELECT_USER = 'SELECT_USER';
+var fetchUsers = function fetchUsers(payload) {
+  return function (dispatch) {
+    dispatch({
+      type: FETCH_USERS
+    });
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_config__WEBPACK_IMPORTED_MODULE_1__["endpoint"], "/search/users?query=").concat(payload, "&client_id=").concat(_config__WEBPACK_IMPORTED_MODULE_1__["ACCESS_KEY"])).then(function (res) {
+      var data = res.data;
+      dispatch(fetchUsersSuccess(data));
+    }).catch(function (err) {
+      dispatch(fetchUsersError(err));
+    });
+  };
+};
+var fetchUsersSuccess = function fetchUsersSuccess(payload) {
+  return {
+    type: FETCH_USERS_SUCCESS,
+    payload: payload
+  };
+};
+var fetchUsersError = function fetchUsersError(error) {
+  return {
+    type: FETCH_USERS_FAILURE,
+    error: error
+  };
+};
+var selectUser = function selectUser(payload) {
+  return {
+    type: SELECT_USER,
+    payload: payload
+  };
+};
+
+/***/ }),
+
 /***/ "./redux/reducers/ItemsReducer.js":
 /*!****************************************!*\
   !*** ./redux/reducers/ItemsReducer.js ***!
@@ -544,20 +606,16 @@ var filterByAge = function filterByAge(min, max) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "items", function() { return items; });
 /* harmony import */ var _actions_items__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/items */ "./redux/actions/items.js");
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config */ "./config.js");
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-
 var initialState = {
   data: [],
-  tmpData: [],
   fetching: false,
   error: false,
-  searching: false,
-  shownItems: _config__WEBPACK_IMPORTED_MODULE_1__["itemsPerScroll"]
+  shownItems: 0
 };
 var items = function items() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -572,7 +630,6 @@ var items = function items() {
     case _actions_items__WEBPACK_IMPORTED_MODULE_0__["FETCH_ITEM_SUCCESS"]:
       return _objectSpread({}, state, {
         data: action.result,
-        tmpData: action.result.slice(0, state.shownItems),
         fetching: false
       });
 
@@ -580,18 +637,6 @@ var items = function items() {
       return _objectSpread({}, state, {
         error: true,
         fetching: false
-      });
-
-    case _actions_items__WEBPACK_IMPORTED_MODULE_0__["ADD_ITEMS"]:
-      var more = state.data.slice(state.shownItems, state.shownItems + _config__WEBPACK_IMPORTED_MODULE_1__["itemsPerScroll"]);
-      return _objectSpread({}, state, {
-        tmpData: state.tmpData.concat(more),
-        shownItems: state.shownItems + _config__WEBPACK_IMPORTED_MODULE_1__["itemsPerScroll"]
-      });
-
-    case _actions_items__WEBPACK_IMPORTED_MODULE_0__["SEARCH_ITEMS"]:
-      return _objectSpread({}, state, {
-        searching: true
       });
 
     case _actions_items__WEBPACK_IMPORTED_MODULE_0__["SEARCH_SUCCESS"]:
@@ -608,8 +653,7 @@ var items = function items() {
     case _actions_items__WEBPACK_IMPORTED_MODULE_0__["SORT_SUCCESS"]:
       return _objectSpread({}, state, {
         searching: false,
-        data: action.result,
-        tmpData: action.result.slice(0, _config__WEBPACK_IMPORTED_MODULE_1__["itemsPerScroll"])
+        data: action.result
       });
 
     case _actions_items__WEBPACK_IMPORTED_MODULE_0__["FILTER_ITEMS"]:
@@ -621,6 +665,66 @@ var items = function items() {
       return _objectSpread({}, state, {
         searching: false,
         tmpData: action.result
+      });
+
+    default:
+      return state;
+  }
+};
+
+/***/ }),
+
+/***/ "./redux/reducers/UsersReducer.js":
+/*!****************************************!*\
+  !*** ./redux/reducers/UsersReducer.js ***!
+  \****************************************/
+/*! exports provided: users */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "users", function() { return users; });
+/* harmony import */ var _actions_users__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/users */ "./redux/actions/users.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var initialState = {
+  data: [],
+  loading: false,
+  error: false,
+  total: 0,
+  selected: {
+    photos: []
+  }
+};
+var users = function users() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions_users__WEBPACK_IMPORTED_MODULE_0__["FETCH_USERS"]:
+      return _objectSpread({}, state, {
+        loading: true
+      });
+
+    case _actions_users__WEBPACK_IMPORTED_MODULE_0__["FETCH_USERS_SUCCESS"]:
+      return _objectSpread({}, state, {
+        data: action.payload.results,
+        loading: false,
+        total: action.payload.total
+      });
+
+    case _actions_users__WEBPACK_IMPORTED_MODULE_0__["FETCH_USERS_FAILURE"]:
+      return _objectSpread({}, state, {
+        error: true,
+        loading: false
+      });
+
+    case _actions_users__WEBPACK_IMPORTED_MODULE_0__["SELECT_USER"]:
+      return _objectSpread({}, state, {
+        selected: action.payload
       });
 
     default:
@@ -643,15 +747,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "redux");
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _ItemsReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ItemsReducer */ "./redux/reducers/ItemsReducer.js");
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-thunk */ "redux-thunk");
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _UsersReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UsersReducer */ "./redux/reducers/UsersReducer.js");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-thunk */ "redux-thunk");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
 var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  items: _ItemsReducer__WEBPACK_IMPORTED_MODULE_1__["items"]
+  items: _ItemsReducer__WEBPACK_IMPORTED_MODULE_1__["items"],
+  users: _UsersReducer__WEBPACK_IMPORTED_MODULE_2__["users"]
 });
-var createStoreWithMiddleware = Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2___default.a)(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"]);
+var createStoreWithMiddleware = Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_3___default.a)(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"]);
 function initializeStore() {
   return createStoreWithMiddleware(rootReducer);
 }
@@ -672,10 +779,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jss__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _material_ui_core_colors_green__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/colors/green */ "@material-ui/core/colors/green");
-/* harmony import */ var _material_ui_core_colors_green__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_colors_green__WEBPACK_IMPORTED_MODULE_2__);
 /* eslint-disable no-underscore-dangle */
-
 
  // A theme with custom primary and secondary color.
 // It's optional.
@@ -684,13 +788,16 @@ var theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["create
   palette: {
     primary: {
       light: '#dfe3ee',
-      main: '#3b5998',
-      dark: '#8b9dc3'
+      main: '#fff',
+      dark: '#8b9dc3',
+      red: '#ef0061',
+      yellow: '#fff210',
+      green: '#00ff8d',
+      mainblue: '#32ceff',
+      black: '#000'
     },
     secondary: {
-      light: _material_ui_core_colors_green__WEBPACK_IMPORTED_MODULE_2___default.a[300],
-      main: _material_ui_core_colors_green__WEBPACK_IMPORTED_MODULE_2___default.a[500],
-      dark: _material_ui_core_colors_green__WEBPACK_IMPORTED_MODULE_2___default.a[700]
+      main: '#fff'
     }
   },
   typography: {
@@ -758,17 +865,6 @@ module.exports = require("@babel/runtime/regenerator");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/CssBaseline");
-
-/***/ }),
-
-/***/ "@material-ui/core/colors/green":
-/*!*************************************************!*\
-  !*** external "@material-ui/core/colors/green" ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/colors/green");
 
 /***/ }),
 

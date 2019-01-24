@@ -1,6 +1,6 @@
 import axios from 'axios';
 import _ from 'lodash';
-import { endpoint } from '../../config';
+import { endpoint, ACCESS_KEY } from '../../config';
 
 export const FETCH_ITEM_SUCCESS = 'FETCH_ITEM_SUCCESS';
 export const FETCH_ITEM_FAILURE = 'FETCH_ITEM_FAILURE';
@@ -30,7 +30,7 @@ export const addItems = () => ({
 export const fetchItems = () => {
   return (dispatch) => {
     dispatch({ type: FETCH_ITEM });
-    return axios.get(endpoint)
+    return axios.get(`${endpoint}/photos/?client_id=${ACCESS_KEY}`)
       .then(res => {
         if (res.status === 200) {
           return dispatch(fetchItemsSuccess(res.data))

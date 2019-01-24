@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import Meta from '../components/Meta';
-import Drawer from '../components/Drawer';
+import Main from '../components/Main';
 import { connect } from 'react-redux';
-import Items from '../components/Items';
 
 const styled_theme = {
-  red: '#FF0000',
+  red: '#ef0061',
+  yellow: '#fff210',
+  green: '#00ff8d',
+  mainblue: '#32ceff',
   black: '#393939',
-  blue: '#3b5998',
+  blue: 'red',
   lightBlue: '#8b9dc3',
   lighterBlue: '#dfe3ee',
   grey: '#3A3A3A',
@@ -19,7 +21,7 @@ const styled_theme = {
 };
 
 const StyledPage = styled.div`
-  background: white;
+  background: black;
   color: ${props => props.theme.black};
 `;
 
@@ -30,11 +32,20 @@ const Inner = styled.div`
 `;
 
 injectGlobal`
+  @import url(//db.onlinewebfonts.com/c/ae8f19f441b335c3fda30febf5069c5a?family=Gotham+Rounded);
   @font-face {
     font-family: 'radnika_next';
     src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+  }
+  @font-face {font-family: "Gotham Rounded";
+    src: url("//db.onlinewebfonts.com/t/ae8f19f441b335c3fda30febf5069c5a.eot");
+    src: url("//db.onlinewebfonts.com/t/ae8f19f441b335c3fda30febf5069c5a.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/ae8f19f441b335c3fda30febf5069c5a.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/ae8f19f441b335c3fda30febf5069c5a.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/ae8f19f441b335c3fda30febf5069c5a.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/ae8f19f441b335c3fda30febf5069c5a.svg#Gotham Rounded") format("svg");
   }
   html {
     box-sizing: border-box;
@@ -48,7 +59,9 @@ injectGlobal`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
-    font-family: 'radnika_next';
+    background-color: black!important;
+    height: 100%;
+    font-family: "Gotham Rounded", Helvetica, Arial, serif;
   }
   a {
     text-decoration: none;
@@ -63,9 +76,7 @@ class Index extends Component {
       <ThemeProvider theme={styled_theme}>
         <StyledPage>
           <Meta />
-          <Drawer>
-            <Items />
-          </Drawer>
+          <Main />
         </StyledPage>
       </ThemeProvider>
     );
